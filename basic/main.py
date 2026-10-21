@@ -1,41 +1,51 @@
-def is_even(number):
+def is_even(number: int) -> bool:
     """ Return True if number is even and False if it is odd.
 
-    :param number:
-    :return:
+    :param number: The number inputted by the user to be checked.
+    :return: Value of true if the number is even, false if it is odd.
     """
-    pass
+    even_or_odd = (number % 2) == 0
+    return even_or_odd
 
 
-def count_vowels(text):
+def count_vowels(text: str) -> int:
     """Count how many vowels (a, e, i, o, u) are in text.
     Uppercase and lowercase vowels should both count.
 
-    :param text:
-    :return:
+    :param text: The text the user wants to check for vowels.
+    :return: The number of vowels.
     """
-    pass
+    vowels = ["a", "e", "i", "o", "u"]
+    num_vowels = 0
+    for letter in text.lower():
+        if letter in vowels:
+            num_vowels += 1
+    return num_vowels
 
 
-def celsius_to_fahrenheit(celsius):
+def celsius_to_fahrenheit(celsius: float) -> float:
     """Convert a Celsius temperature to Fahrenheit.
 
-    :param celsius:
-    :return:
+    :param celsius: The number the user wishes to convert to Fahrenheit.
+    :return: The number in Fahrenheit.
     """
-    pass
+    fahrenheit = celsius * 1.8 + 32
+    return fahrenheit
 
 
-def reverse_text(text):
+def reverse_text(text: str) -> str:
     """Return the characters in text in reverse order.
 
     Example:
         "robot" becomes "tobor"
 
-    :param text:
-    :return:
+    :param text: The text the user wishes to invert.
+    :return: The inverted text.
     """
-    pass
+    reversed_text = ""
+    for letter in text:
+        reversed_text = letter + reversed_text
+    return reversed_text
 
 
 def larger_number(a, b):
